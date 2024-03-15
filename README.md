@@ -22,14 +22,11 @@ The PokeAPI Project is a React application that fetches data from the PokeAPI to
 
    ```bash
    git clone https://github.com/your-username/pokeapi-project.git
-2. Navigate to the project directory
+
+2. Install Dependencies
 
    ```bash
-   cd pokeapi-project
-3. Install Dependencies
-
-   ```bash
-   cd pokeapi-project
+   npm install
    
 ## Usage
 
