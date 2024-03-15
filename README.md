@@ -1,8 +1,38 @@
-# React + Vite
+# PokeAPI Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The PokeAPI Project is a React application that fetches data from the PokeAPI to display information about Pokémon. It allows users to browse through Pokémon cards and load more as they scroll down the page.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Displays Pokémon cards with their names, images, and types.
+- Allows users to load more Pokémon cards by clicking a button.
+- Includes a loading indicator while fetching data.
+
+## Technologies Used
+
+- React
+- Material-UI
+- PokeAPI
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/pokeapi-project.git
+2. Navigate to the project directory
+
+   ```bash
+   cd pokeapi-project
+3. Install Dependencies
+
+   ```bash
+   cd pokeapi-project
+   
+## Usage
+
+1.Start the development server:
+   ```bash
+   npm run dev
