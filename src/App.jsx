@@ -7,7 +7,7 @@ const App = () => {
   const [allData, setAllData] = useState([]);
   const [pokemonData, setPokemonData] = useState([]);
   const [offset, setOffset] = useState(0);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [showButton, setShowButton] = useState(true);
   const initState = useRef(true);
 
