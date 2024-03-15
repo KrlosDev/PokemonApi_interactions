@@ -21,7 +21,7 @@ The PokeAPI Project is a React application that fetches data from the PokeAPI to
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/pokeapi-project.git
+   git clone https://github.com/KrlosDev/PokemonApi_interactions/tree/main
 
 2. Install Dependencies
 
