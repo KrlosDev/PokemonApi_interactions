@@ -27,10 +27,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 60vh;
+  padding-bottom:1rem
 }
 
 h1 {
@@ -45,7 +45,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: 'Roboto Flex';
-  background-color: #1a1a1a;
+  background-color: #4dad5b;
   cursor: pointer;
   transition: border-color 0.25s;
   margin-top: 1rem;
@@ -57,10 +57,38 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-.logo{
-  height: 100px;
+/*header style*/
+.heading
+{
+    text-align: center;
+    font-size: 3rem;
+    margin: 4rem 0 2rem;
+    color: #444;
+    position: relative;
 }
+
+.heading::after
+{
+    content: '';
+    position: relative;
+    display: block;
+    width: 2em;
+    height: 4px;
+    background-color: #FB6C6C;
+    top: 100%;
+    left: 50%;
+    margin-left: -1em;
+}
+
+.heading > i
+{
+    display: inline-block;
+    height: .6em;
+    width: .6em;
+    background-image: url( './assets/pokeball.svg' );
+    background-repeat: no-repeat;
+}
+/*types styles*/
 .pkm-type {
   font-size: 15px;
   font-weight: bold;
@@ -186,52 +214,83 @@ button:focus-visible {
   border-top-color: #ffcaff;
   border-bottom-color: #d499d1;
 }
+/*Background Pokeball*/
+.bg-pokeball
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: rgba( 255,255,255,.2 );
+}
+
+.bg-pokeball::before, .bg-pokeball::after
+{
+    display: block;
+    border-radius: 100%;
+}
+
+.bg-pokeball::before
+{
+    content: '';
+    position: relative;
+    width: 10em;
+    padding-bottom: 10em;
+    border: 4em solid currentColor;
+    clip-path: polygon( 0 0, 0 40%, 50% 40%, 50% 60%, 0 60%, 0 100%, 100% 100%, 100% 60%, 50% 60%, 50% 40%, 100% 40%, 100% 0 );
+}
+
+.bg-pokeball::after
+{
+    content: '';
+    position: absolute;
+    width: 5em;
+    padding-bottom: 5em;
+    background-color: currentColor;
+}
+
 /*custom loader*/
-
-.pokeball {
-  width: 60px;
-  height: 60px;
-  background-color: #fff;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  border: 3px solid black;
-  animation: frames 0.8s linear 0s infinite;
+.loader
+{
+    font-size: 1.2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 21vh 0;
+    flex-direction: column;
 }
 
-.pokeball:after {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 30px;
-  background-color: red;
-  border-bottom: 4px solid black;
-  top: -4px;
+.loader::before
+{
+    content: '';
+    display: block;
+    height: 2em;
+    width: 2em;
+    border: .6em solid #FB6C6C;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    clip-path: polygon( 0 0, 0 40%, 50% 40%, 50% 60%, 0 60%, 0 100%, 100% 100%, 100% 60%, 50% 60%, 50% 40%, 100% 40%, 100% 0 );
+    animation: spin .5s infinite ease-in-out;
 }
 
-.pokeball:before {
-  content: '';
-  position: absolute;
-  background-color: #fff;
-  width: 10px;
-  height: 10px;
-  border: 4px solid black;
-  border-radius: 50%;
-  bottom: 21px;
-  right: 21px;
-  z-index: 1;
+.loader::after
+{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -1.6em;
+    height: 1.2em;
+    width: 1.2em;
+    background-color: #CCC;
+    border-radius: 100%;
 }
-
-/* AnimationFrames */
-@keyframes frames {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

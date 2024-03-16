@@ -2,9 +2,9 @@ import React from 'react';
 
 const PokeballLoader = () => {
   return (
-    <div>
-      <div className="pokeball"></div>
-    </div>
+		<div className="loader" style={{color:'black'}}>
+            Catching 'em all...
+		</div>
   );
 };
 
