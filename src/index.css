@@ -216,7 +216,8 @@ button:focus-visible {
 }
 /*Background Pokeball*/
 .bg-pokeball
-{
+{   
+    margin-top: 0.4rem;
     position: absolute;
     display: flex;
     align-items: center;
