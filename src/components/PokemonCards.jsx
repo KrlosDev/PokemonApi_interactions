@@ -40,7 +40,7 @@ const PokemonCard = ({ pokemon }) => {
             color: "white",
             fontFamily: "Roboto Flex",
             background: "#232323",
-            padding: 2,
+            padding: 2.5,
             zIndex: 2,
             width: "100%",
           }}
